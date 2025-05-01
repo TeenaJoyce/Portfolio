@@ -1,0 +1,321 @@
+body {
+  padding: 0px;
+  margin: 0;
+  background-image: url('Images/crossword.png');
+}
+
+h1 {
+  font-family: 'Cormorant';
+  font-size: 30px;
+}
+
+h2 {
+  font-family: 'Cormorant';
+  font-size: 20px;
+}
+
+p {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 15px;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.header-image {
+  background-image: url('Images/Misc/MeBanner.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100vh;
+}
+
+header {
+  background-color: #203845;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.navbar {
+  position: absolute;
+  top: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.navbar ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 100px;
+}
+
+.navbar ul li {
+  display: inline;
+}
+
+.navbar ul li a {
+  text-decoration: none;
+  color: white;
+  font-size: 20px;
+  transition: color 0.3s;
+}
+
+.navbar ul li a:hover {
+  color: #ddd;
+}
+
+/* ABOUT ME */
+
+.about-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.about-content {
+  flex: 2;
+  min-width: 300px;
+}
+
+.about-quote {
+  flex: 1;
+  min-width: 250px;
+  padding: 20px;
+  background: #f6f6f6;
+  border-left: 5px solid #50AEBA;
+  font-size: 40px;
+  font-style: italic;
+  color: #333;
+  display: flex;
+  align-items: center;
+}
+
+.about-quote blockquote {
+  margin: 0;
+}
+
+.about-quote span {
+  display: block;
+  margin-top: 10px;
+  font-size: 0.9em;
+  font-weight: bold;
+  color: #555;
+}
+
+.tabs button {
+  background-color: #ffffff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  border: 2px solid #50AEBA;
+  padding: 10px 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 5px;
+  border-radius: 5px;
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+
+/* Animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#skills {
+  padding: 2rem;
+  border-radius: 8px;
+}
+
+.skills-group {
+  margin-bottom: 1.5rem;
+}
+
+.skills-group h3 {
+  margin-bottom: 0.5rem;
+  color: black;
+
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  justify-content: center;
+}
+
+.tag {
+  color: black;
+  padding: 0.4rem 0.8rem;
+  border-radius: 20px;
+  font-size: 15px;
+  text-decoration: underline solid #355c9d;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  white-space: nowrap;
+}
+
+.hobbies-group {
+  margin-bottom: 1.5rem;
+}
+
+.hobby-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hobby-list li {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+/* EDUCATION/EXPERIANCE */
+section {
+  padding: 2rem;
+  text-align: center;
+  flex: 1;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  padding: 40px;
+}
+
+.card {
+  padding: 20px;
+  border-radius: 8px;
+  margin-bottom: 20px;
+  background-color: #ffffff;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: black;
+  border: 2px solid #50AEBA;
+}
+
+.card h3 {
+  color: #355c9d;
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.card p {
+  color: black;
+  margin: 5px 0;
+}
+
+/* PORTFOLIO */
+.portfolio-section {
+  padding: 20px;
+}
+
+.portfolio-filters {
+  list-style: none;
+  background-color: #203845;
+  top: 20px;
+  left: 50%;
+  padding: 1rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.portfolio-filters li {
+  margin: 0 15px;
+  cursor: pointer;
+  font-family: 'Cormorant';
+  font-size: 18px;
+  color: #ccc;
+}
+
+.portfolio-filters .active {
+  color: #fff;
+  font-weight: bold;
+}
+
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+
+.portfolio-item {
+  background-color: #f6f6f6;
+  border: 2px solid #50AEBA;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.portfolio-item img {
+  width: 270px;           /* set fixed width */
+  height: 200px;          /* set fixed height */
+  object-fit: cover;    /* show full image without cropping */
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+
+.portfolio-item h3 {
+  margin: 10px 0;
+  color: black;
+}
+
+.portfolio-item p {
+  color: #50AEBA;
+  text-align: center;
+}
+
+.portfolio-item a {
+  text-decoration: none;
+  color: inherit;
+  /* Optional: makes links use the same text color */
+}
+
+.portfolio-item a:hover {
+  text-decoration: underline;
+}
+
+/* FOOTER */
+.contact-info {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 600px;
+  /* Adjust this to fit your layout */
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 16px;
+}
+
+
+
+footer {
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}

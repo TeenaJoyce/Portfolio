@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Maple Grove Lodge</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css">
+  <link rel="stylesheet" href="Project.css" />
+</head>
+
+<div class="header-image">
+  <nav class="navbar">
+    <header>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="#projects">Portfolio</a></li>
+      </ul>
+    </header>
+  </nav>
+</div>
+
+<section id="projects" class="project-details">
+  <img src="Images/Designs/MapleLodge Logo.png" alt="Project preview" />
+  <div class="description">
+    <h2>About the Project</h2>
+    <p>Blending rustic charm with modern elegance, Maple Grove Lodge is a fictional resort concept crafted to offer guests a luxurious escape into comfort and tranquility.</p>
+
+    <h3>Tech Used</h3>
+    <ul>
+      <li>Adobe Photoshop</li>
+      <li>Canva</li>
+      <li>Capcut</li>
+    </ul>
+  </div>
+</section>
+
+
+<section id="visionboard">
+  <img src="Images/Designs/MGL_vision board.png" alt="Project preview" />
+</section>
+
+
+<section class="project-more" id="projects">
+  <video width="100%" height="auto" controls>
+    <source src="Images/Designs/Maple Grove Lodge.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+
+
+<h2 class="grid-title">Promotional Designs</h2>
+<div class="grid-container">
+  <div class="grid-item"><img src="Images/Designs/MGL_Couples Getaway INS.png" alt="Design 1"
+      onclick="openModal('Images/Designs/MGL_Couples Getaway INS.png', 'MGL Couples Post')"></div>
+  <div class="grid-item"><img src="Images/Designs/MGL_WaterSpots INS.png" alt="Design 2"
+      onclick="openModal('Images/Designs/MGL_WaterSpots INS.png', 'MGL Water Activities')"></div>
+</div>
+
+
+
+<h2 class="grid-title">Mockups</h2>
+<div class="grid-container">
+    <a href="Images/Designs/MGL_businesscard.png" data-lightbox="MGLBusinessCard-gallery" data-title="MGL BusinessCard">
+        <img src="Images/Designs/MGL_businesscard.png" alt="View Business Card" style="width:100%; height:auto;">
+    </a>
+    <div style="position:absolute; opacity:0; height:0; overflow:hidden;">
+        <a href="Images/Designs/MGL_businesscard_Front.png" data-lightbox="MGLBusinessCard-gallery" data-title="Holi Poster 2"></a>
+        <a href="Images/Designs/MGL_businesscard_Back.png" data-lightbox="MGLBusinessCard-gallery" data-title="Holi Poster 3"></a>
+    </div>
+
+<a href="Images/Designs/MGL_z-fold-mockup.png" data-lightbox="MGLBrochure-gallery" data-title="z-fold-mockup">
+        <img src="Images/Designs/MGL_z-fold-mockup.png" alt="View Brochure Card" style="width:100%; height:auto;">
+    </a>
+    <div style="position:absolute; opacity:0; height:0; overflow:hidden;">
+        <a href="Images/Designs/MGL_Brochure_Front.png" data-lightbox="MGLBrochure-gallery" data-title="Z-fold-mockup Front"></a>
+        <a href="Images/Designs/MGL_Brochure_Inside.png" data-lightbox="MGLBrochure-gallery" data-title="Z-fold-mockup Inside"></a>
+    </div>
+</div>
+
+
+
+
+
+<!-- Modal -->
+<div class="modal" id="imageModal">
+  <span class="close" onclick="closeModal()">&times;</span>
+  <div class="modal-content">
+    <img id="modalImg" src="" alt="">
+    <div class="text" id="modalText"></div>
+  </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+<script>
+  function openModal(imgSrc, text) {
+    document.getElementById('modalImg').src = imgSrc;
+    document.getElementById('modalText').innerText = text;
+    document.getElementById('imageModal').style.display = 'flex';
+  }
+
+  function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+  }
+</script>
+<footer>
+  <p3>&copy; 2025 Teena Benhur. All rights reserved.</p3>
+</footer>
+</body>
+
+</html>

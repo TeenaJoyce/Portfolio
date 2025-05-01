@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IDM</title>
+  <link rel="stylesheet" href="Project.css" />
+</head>
+
+<body>
+
+  <div class="header-image">
+    <nav class="navbar">
+      <header>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+        </ul>
+      </header>
+    </nav>
+  </div>
+
+
+  <section class="project-details">
+    <img src="Images/Misc/IDM logo.png" alt="Project Logo" />
+    <div class="description">
+      <h1>About the Project</h1>
+      <p>We redesigned the logo for the IDM course, exploring its identity through research, surveys, and branding
+        strategy.</p>
+
+      <h1>Tech Used</h1>
+      <ul>
+        <li>Adobe Photoshop</li>
+        <li>Adobe Illustrator</li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="project-section">
+    <h1>IDM Logo Redesign Project</h1>
+    <h2>Trinity College Dublin – MSc in Interactive Digital Media</h2>
+    <p>We redesigned the logo for the IDM course, exploring its identity through research, surveys, and branding
+      strategy.</p>
+
+    <details>
+      <summary><strong>Research Phase</strong></summary>
+      <p><strong>Initial Research</strong></p>
+      <ul>
+        <li>Reviewed logos of institutions focused on tech, creativity, and innovation.</li>
+        <li>Studied notable rebrands — MIT Media Lab (successful), Pepsi (unsuccessful).</li>
+      </ul>
+
+      <p><strong>Survey</strong></p>
+      <ul>
+        <li>Google Form with 30 participants from the IDM WhatsApp group.</li>
+        <li>Questions included:
+          <ul>
+            <li>“What word best describes IDM?”</li>
+            <li>“Does the course name reflect the curriculum?”</li>
+            <li>“What attracted you to the course?”</li>
+          </ul>
+        </li>
+      </ul>
+
+      <p><strong>Findings</strong></p>
+      <ul>
+        <li>IDM is widely associated with technology and creativity.</li>
+        <li>The course name was generally seen as accurate.</li>
+        <li>Popular among students from Ireland, China, and India.</li>
+        <li>Most enrolled shortly after undergrad.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary><strong>Personas</strong></summary>
+      <ul>
+        <li>Based on survey data, we created fictional personas.</li>
+        <li>Represented tech-savvy, globally minded students seeking creative careers.</li>
+      </ul>
+    </details>
+
+    <details>
+      <summary><strong>Design Strategy</strong></summary>
+      <p><strong>Visual Identity</strong></p>
+      <ul>
+        <li>Brand direction leaned into technology themes.</li>
+        <li>Supported by survey insights and course module content.</li>
+      </ul>
+
+      <p><strong>Naming</strong></p>
+      <ul>
+        <li>The name “Interactive Digital Media” was retained.</li>
+        <li>Changing it could risk misalignment with audience perception.</li>
+      </ul>
+    </details>
+  </section>
+
+
+
+  <h1 class="grid-title" id="projects">Mockups</h1>
+  <div class="grid-container">
+    <div class="grid-item"><img src="Images/Designs/IDM brochure.png" alt="Design 1"
+        onclick="openModal('Images/Designs/IDM brochure.png', 'Brochure Mockup')"></div>
+    <div class="grid-item"><img src="Images/Designs/Mug mockup.png" alt="Design 2"
+        onclick="openModal('Images/Designs/Mug mockup.png', 'Mug mockup')"></div>
+    <div class="grid-item"><img src="Images/Designs/Poster Mockup.png" alt="Design 3"
+        onclick="openModal('Images/Designs/Poster mockup.png', 'Poster Mockup')"></div>
+    <div class="grid-item"><img src="Images/Designs/Web mockup.png" alt="Design 4"
+        onclick="openModal('Images/Designs/Web mockup.png', 'Web page Mockup')"></div>
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="imageModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="">
+      <div class="text" id="modalText"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p3>&copy; 2025 Teena Benhur. All rights reserved.</p3>
+  </footer>
+
+
+
+
+  <script>
+    function openModal(imgSrc, text) {
+      document.getElementById('modalImg').src = imgSrc;
+      document.getElementById('modalText').innerText = text;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

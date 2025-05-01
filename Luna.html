@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Luna Crisps</title>
+  <link rel="stylesheet" href="Project.css" />
+</head>
+
+<body>
+
+  <div class="header-image">
+    <nav class="navbar">
+      <header>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+        </ul>
+      </header>
+    </nav>
+  </div>
+
+  <section class="project-details">
+    <img src="Images/Misc/Soy crisp mockup.png" alt="Project Logo" />
+    <div class="description">
+      <h2>About the Project</h2>
+      <p>Luna is a bold and adventurous chips brand inspired by the mystique of the moon and the rich flavors of Chinese
+        cuisine. Blending tradition with modern snacking trends, Luna offers a unique taste journey through ingredients
+        like soy sauce, chili flakes, and aromatic spices — creating an unforgettable experience with every bite.</p>
+
+      <h3>Tech Used</h3>
+      <ul>
+        <li>Adobe Photoshop</li>
+        <li>Adobe Illustrator</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="project-section">
+    <h1>Luna Crisps</h1>
+    <h2>Orchid Fragrance Line – Social Media Content Creation</h2>
+
+    <details>
+      <summary><strong>Vision</strong></summary>
+      <ul>
+        Luna aims to redefine snack time by offering flavors that celebrate the depth and complexity of Chinese culinary
+        traditions. We want to transport our customers to a world of vibrant tastes, bringing global flavors to everyday
+        moments with authenticity, creativity, and a spirit of discovery.
+      </ul>
+    </details>
+
+    <details>
+      <summary><strong>Research Phase</strong></summary>
+      <ul>
+        Our research involved studying current snack food trends, the rising interest in global and fusion flavors, and
+        the emotional appeal of cultural storytelling. We also examined packaging styles, color psychology, and
+        successful branding strategies used by leading snack brands worldwide.
+      </ul>
+    </details>
+
+    <details>
+      <summary><strong>Aesthetics</strong></summary>
+      <ul>
+        Luna’s aesthetic combines mystical, moonlit themes with bold, rich colors inspired by Chinese culture — think
+        deep blues, glowing golds, and fiery reds. The visual style balances modern minimalism with traditional motifs,
+        creating a design that feels both contemporary and rooted in heritage.
+      </ul>
+    </details>
+
+    <details>
+      <summary><strong>Personas</strong></summary>
+      <ul>
+        <li>The Flavor Explorer: A foodie who loves trying new, global tastes and seeks out unique snacking experiences.
+        </li>
+        <li>The Trendsetter: A young adult who values design, aesthetic, and innovative brands that feel authentic and
+          fresh </li>
+        <li>The Comfort Seeker: Someone who enjoys nostalgic, comforting flavors but is open to bold twists on classics.
+        </li>
+      </ul>
+    </details>
+
+  </section>
+
+
+  <h1 class="grid-title" id="projects">Mockups</h1>
+
+  <div class="grid-container">
+
+    <div class="grid-item"><img src="Images/Designs/Wasabi crisps mockup.png" alt="Design 2"
+        onclick="openModal('Images/Designs/Wasabi crisps mockup.png', 'Wasabi Crisps Mockup')"></div>
+    <div class="grid-item"><img src="Images/Designs/Mystery mockup.png" alt="Design 3"
+        onclick="openModal('Images/Designs/Mystery mockup.png', 'Mystery Crisps Mockup')"></div>
+    <div class="grid-item"><img src="Images/Designs/Luna billboard.png" alt="Design 1"
+        onclick="openModal('Images/Designs/Luna billboard.png', 'Luna Billboard')"></div>
+    <!-- Add more items as needed -->
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="imageModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="">
+      <div class="text" id="modalText"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p3>&copy; 2025 Teena Benhur. All rights reserved.</p3>
+  </footer>
+
+  <script>
+    function openModal(imgSrc, text) {
+      document.getElementById('modalImg').src = imgSrc;
+      document.getElementById('modalText').innerText = text;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>

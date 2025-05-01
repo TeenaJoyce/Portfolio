@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orchid</title>
+  <link rel="stylesheet" href="Project.css" />
+</head>
+
+<body>
+
+  <div class="header-image">
+    <nav class="navbar">
+      <header>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+        </ul>
+      </header>
+    </nav>
+  </div>
+
+  <section class="project-details">
+    <img src="Images/Misc/OrchidLogo.png" alt="Project Logo" />
+    <div class="description">
+      <h2>About the Project</h2>
+      <p>Designed a captivating social media content for a new fragrance line “Orchid”. Developed social media posts for
+        the Orchid launch, resulting in an increase in follower engagement. Created exciting visuals to promote the brand and its products driving awareness and customer interest.</p>
+
+      <h3>Tech Used</h3>
+      <ul>
+        <li>Canva</li>
+      </ul>
+    </div>
+  </section>
+
+
+  <section class="project-section">
+    <h1>Orchid Fragrance Line</h1>
+    <h2>Orchid Fragrance Line – Social Media Content Creation</h2>
+
+    <details>
+      <summary><strong>Vision</strong></summary>
+      <ul>
+        <li>Elegant Minimalism: Focused on simplicity, open space, and graceful typography.</li>
+        <li>Luxury Atmosphere: Inspired by premium fragrance brands to evoke sophistication and calmness.</li>
+      </ul>
+
+    </details>
+
+    <details>
+      <summary><strong>Aesthetics</strong></summary>
+      <ul>
+        <li>Elegant Minimalism: Focused on simplicity, open space, and graceful typography.</li>
+        <li>Luxury Atmosphere: Inspired by premium fragrance brands to evoke sophistication and calmness.</li>
+      </ul>
+    </details>
+
+  </section>
+
+
+  <h1 class="grid-title" id="projects">Promotional Designs</h1>
+
+  <div class="grid-container">
+    <div class="grid-item"><img src="Images/Designs/Orchid Social media post.png" alt="Design 1"
+        onclick="openModal('Images/Designs/Orchid Social media post.png', 'Orchid Social Media Post')"></div>
+    <div class="grid-item"><img src="Images/Designs/Blossom collection.png" alt="Design 2"
+        onclick="openModal('Images/Designs/Blossom collection.png', 'Blossom Collection Post')"></div>
+    <div class="grid-item"><img src="Images/Designs/Auro collection.png" alt="Design 3"
+        onclick="openModal('Images/Designs/Auro collection.png', 'Aura Collection Launch Post')"></div>
+    <div class="grid-item"><img src="Images/Designs/Auro collection (2).png" alt="Design 4"
+        onclick="openModal('Images/Designs/Auro collection (2).png', 'Aura Collection Post')"></div>
+    <!-- Add more items as needed -->
+  </div>
+
+  <!-- Modal -->
+  <div class="modal" id="imageModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="">
+      <div class="text" id="modalText"></div>
+    </div>
+  </div>
+
+  <footer>
+    <p3>&copy; 2025 Teena Benhur. All rights reserved.</p3>
+  </footer>
+
+  <script>
+    function openModal(imgSrc, text) {
+      document.getElementById('modalImg').src = imgSrc;
+      document.getElementById('modalText').innerText = text;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+    }
+  </script>
+</body>
+
+</html>
