@@ -7,11 +7,14 @@ body {
 h1 {
   font-family: 'Cormorant';
   font-size: 30px;
+  color: #203845;
 }
 
 h2 {
   font-family: 'Cormorant';
   font-size: 20px;
+  color: #203845;
+  margin-top: 10px;
 }
 
 p {
@@ -20,6 +23,14 @@ p {
   line-height: 1.8;
   text-align: left;
 }
+
+.center-heading {
+  text-align: center;
+  margin-top: 50px; /* optional spacing */
+  font-size: 50px;    /* optional size */
+  padding: 40px 20px;
+}
+
 
 header {
   background-color: #203845;
@@ -59,7 +70,6 @@ header {
   color: #ddd;
 }
 
-
 .project-details {
   display: flex;
   flex-wrap: wrap;
@@ -97,26 +107,6 @@ video {
   border-radius: 10px;
 }
 
-h1 {
-  font-family: 'Cormorant';
-  font-size: 30px;
-  color: #203845;
-}
-
-h2 {
-  font-family: 'Cormorant';
-  font-size: 20px;
-  color: #203845;
-  margin-top: 10px;
-}
-
-p {
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  font-size: 15px;
-  line-height: 1.8;
-  text-align: left;
-}
-
 summary {
   cursor: pointer;
   font-size: 15px;
@@ -140,8 +130,6 @@ ul {
   line-height: 1.6;
 }
 
-
-
 .grid-container {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
@@ -155,9 +143,26 @@ ul {
   border-radius: 10px;
   cursor: pointer;
   transition: transform 0.3s;
+  object-fit: cover;
+  display: block;
+  align-self: start;
 }
 
-.grid-container img:hover {
+
+.grid-container video {
+  width: 310px;
+  height: 550px;
+  border-radius: 10px;
+  cursor: pointer;
+  object-fit: cover;
+  transition: transform 0.3s;
+  display: block;
+  align-self: start;
+margin-top: 0 !important;
+}
+
+.grid-container img:hover,
+.grid-container video:hover {
   transform: scale(1.02);
 }
 
@@ -177,34 +182,110 @@ ul {
 
 .modal-content {
   background: transparent;
-  /* No white background */
   max-width: 90%;
   width: auto;
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  /* Stack image and text */
   padding: 20px;
   border-radius: 10px;
 }
 
 .modal img {
   max-width: 90vw;
-  /* Allow big images */
   max-height: 80vh;
-  /* Don't overflow screen */
   border-radius: 10px;
   object-fit: contain;
 }
 
 .modal .text {
   color: white;
-  /* Make text white to see on dark background */
   font-size: 1.2rem;
   margin-top: 20px;
   text-align: center;
 }
+
+.overview-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px auto; /* Adds vertical spacing and centers horizontally */
+}
+
+.pdf-container {
+  position: relative;
+  width: 310px;
+  height: 550px;
+  margin: auto;
+  overflow: hidden;
+}
+
+.pdf-footer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-color: rgba(255, 255, 255, 0.95);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  pointer-events: none;
+}
+
+.pdf-container:hover .pdf-footer {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.pdf-footer button {
+  padding: 8px 14px;
+  background-color: #333;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.7);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  width: 80%;
+  height: 90%;
+  background: white;
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+}
+
+.modal-content iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.modal .close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  font-size: 30px;
+  color: #000;
+  cursor: pointer;
+}
+
 
 
 #visionboard {
@@ -224,9 +305,6 @@ ul {
   font-size: 2rem;
   cursor: pointer;
 }
-
-
-
 
 footer {
   text-align: center;
