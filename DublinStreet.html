@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dublin Street Art</title>
+  <link rel="stylesheet" href="Project.css" />
+</head>
+
+<body>
+
+  <div class="header-image">
+    <nav class="navbar">
+      <header>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="#projects">Portfolio</a></li>
+        </ul>
+      </header>
+    </nav>
+  </div>
+
+  <section class="project-details">
+    <h1 class="center-heading">Digital Campaign: Raising Awareness for Dublin Street Art</h1>
+  </section>
+
+  <div class="grid-container">
+    <div class="grid-item">
+      <video src="Images/Designs/Dublin Graffiti Intro.mp4" muted playsinline onclick="openModal('video', 'Images/Designs/Dublin Graffiti Intro.mp4', 'Reel: Behind-the-scenes')"></video>
+    </div>
+    <div class="grid-item">
+      <video src="Images/Designs/Amature Wall reel.mp4" muted playsinline onclick="openModal('video', 'Images/Designs/Amature Wall reel.mp4', 'Reel: Amature Wall')"></video>
+    </div>
+    <div class="grid-item">
+      <video src="Images/Designs/Sketch Walk Reel.mp4" muted playsinline onclick="openModal('video', 'Images/Designs/Sketch Walk Reel.mp4', 'Reel: Sketch Walk Reel')"></video>
+    </div>
+    <div class="pdf-container">
+      <iframe 
+        src="Images/Designs/Graffiti Newsletter.pdf" 
+        width="310" 
+        height="550" 
+        style="border-radius: 10px; border: 1px solid #ccc;">
+      </iframe>
+      <div class="pdf-footer">
+        <button onclick="openPdfModal()">Expand PDF</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Video/Image Modal -->
+  <div class="modal" id="imageModal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImg" src="" alt="" style="display: none;">
+      <video id="modalVideo" controls style="max-width: 90vw; max-height: 80vh; border-radius: 10px; display: none;"></video>
+      <div class="text" id="modalText"></div>
+    </div>
+  </div>
+
+  <!-- PDF Modal -->
+  <div class="modal" id="pdfModal">
+    <span class="close" onclick="closePdfModal()">&times;</span>
+    <div class="modal-content">
+      <iframe id="fullPdf" src="" frameborder="0" style="width: 100%; height: 100%; border: none;"></iframe>
+    </div>
+  </div>
+
+  <footer>
+    <p3>&copy; 2025 Teena Benhur. All rights reserved.</p3>
+  </footer>
+
+  <script>
+    function openModal(type, src, text) {
+      const modalImg = document.getElementById('modalImg');
+      const modalVideo = document.getElementById('modalVideo');
+
+      if (type === 'image') {
+        modalImg.style.display = 'block';
+        modalImg.src = src;
+        modalVideo.style.display = 'none';
+        modalVideo.pause();
+      } else if (type === 'video') {
+        modalVideo.style.display = 'block';
+        modalVideo.src = src;
+        modalVideo.play();
+        modalImg.style.display = 'none';
+      }
+
+      document.getElementById('modalText').innerText = text;
+      document.getElementById('imageModal').style.display = 'flex';
+    }
+
+    function closeModal() {
+      document.getElementById('imageModal').style.display = 'none';
+      const video = document.getElementById('modalVideo');
+      video.pause();
+      video.currentTime = 0;
+    }
+
+    function openPdfModal() {
+      document.getElementById('fullPdf').src = 'Images/Designs/Graffiti Newsletter.pdf';
+      document.getElementById('pdfModal').style.display = 'flex';
+    }
+
+    function closePdfModal() {
+      document.getElementById('pdfModal').style.display = 'none';
+      document.getElementById('fullPdf').src = '';
+    }
+  </script>
+</body>
+
+</html>
